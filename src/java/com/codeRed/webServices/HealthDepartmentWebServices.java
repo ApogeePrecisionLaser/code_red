@@ -303,7 +303,7 @@ public class HealthDepartmentWebServices {
         System.out.println("PocServiceConnectionServices...");
         ShiftTimeModel stm = new ShiftTimeModel();
         try {
-            stm.setConnection((com.mysql.jdbc.Connection) DBConnection.getConnectionForUtf(serveletContext));
+            stm.setConnection((java.sql.Connection) DBConnection.getConnectionForUtf(serveletContext));
         } catch (Exception ex) {
             System.out.println("ERROR : in vehicleDetail() in RideWebservices : " + ex);
         }

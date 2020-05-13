@@ -9,7 +9,7 @@ import com.codeRed.dbCon.DBConnection;
 import com.codeRed.organization.model.RwaBeneficiaryModel;
 import com.codeRed.organization.tableClasses.RwaBeneficiaryBean;
 import com.codeRed.util.UniqueIDGenerator;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;

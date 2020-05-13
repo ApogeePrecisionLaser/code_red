@@ -8,7 +8,7 @@ package com.codeRed.webServices;
 import com.codeRed.dbCon.DBConnection;
 import com.codeRed.home.messageViewModel;
 import com.codeRed.webServices.model.UserAppWebServiceModel;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.File;
 import javax.servlet.ServletContext;
 

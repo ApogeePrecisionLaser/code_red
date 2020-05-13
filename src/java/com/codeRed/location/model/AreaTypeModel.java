@@ -5,7 +5,7 @@
 
 package com.codeRed.location.model;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import com.codeRed.location.tableClasses.AreaTypeBean;
 import com.codeRed.util.KrutiDevToUnicodeConverter;
 import com.codeRed.util.UnicodeToKrutiDevConverter;

@@ -7,7 +7,7 @@ package com.apt.log.controller;
 import com.apt.home.model.LoginModel;
 import com.apt.tableClasses.log.LoginBean;
 import com.codeRed.dbCon.DBConnection;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletContext;
@@ -37,7 +37,6 @@ public class LoginController extends HttpServlet {
             ServletContext ctx = getServletContext();
             String MyUserName = "", myUserPass = "";
             loginModel.setConnection((Connection) DBConnection.getConnectionForUtf(ctx));
-            System.out.println("connection - "+loginModel.getConnection());
             String task = request.getParameter("task");
             if (task == null) {
                 task = "";

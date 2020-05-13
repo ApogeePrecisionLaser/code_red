@@ -11,8 +11,8 @@ file://192.168.1.6/e/new_repository
 644
 jpss
 has-props
-
-
+has-prop-mods
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -25,6 +25,108 @@ has-props
 
 
 bb2a1e29-86ca-ef48-b096-f23b4a743b66
+
+ant-deploy.xml
+file
+
+
+
+
+2017-01-30T08:09:13.338000Z
+a8253599a5d4529e661bb519421e377a
+2017-03-30T07:47:58.215711Z
+644
+jpss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1605
+
+build-impl.xml
+file
+
+
+
+
+2017-05-05T10:17:44.038555Z
+3b9e7838f109b442cbf7dc51cb2026c3
+2017-03-30T07:47:58.215711Z
+644
+jpss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+56677
+
+genfiles.properties
+file
+
+
+
+
+2017-05-05T10:17:43.976551Z
+30c26614b7c7f7d6cea255e24248bcc0
+2017-03-30T07:47:58.215711Z
+644
+jpss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+625
 
 project.properties
 file
@@ -94,40 +196,6 @@ jpss
 
 3468
 
-genfiles.properties
-file
-
-
-
-
-2017-05-05T10:17:43.976551Z
-30c26614b7c7f7d6cea255e24248bcc0
-2017-03-30T07:47:58.215711Z
-644
-jpss
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-625
-
 rest-build.xml
 file
 
@@ -161,72 +229,4 @@ jpss
 
 
 2755
-
-ant-deploy.xml
-file
-
-
-
-
-2017-01-30T08:09:13.338000Z
-a8253599a5d4529e661bb519421e377a
-2017-03-30T07:47:58.215711Z
-644
-jpss
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1605
-
-build-impl.xml
-file
-
-
-
-
-2017-05-05T10:17:44.038555Z
-3b9e7838f109b442cbf7dc51cb2026c3
-2017-03-30T07:47:58.215711Z
-644
-jpss
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-56677
 

@@ -621,7 +621,7 @@ public class ShiftLoginModel {
             String mobile_no = getMobileNO(beneficiary_id);
             rowAffected = pstmt.executeUpdate();
             ShiftTimeModel stm = new ShiftTimeModel();
-            stm.setConnection((com.mysql.jdbc.Connection) connection);
+            stm.setConnection((java.sql.Connection) connection);
             if (status.equals("Y")) {
                 stm.sendSmsToAssignedFor(mobile_no, " जबलपुर नगर निगम की सफाई में सहायता करने के लिए आपका धन्यवाद ");
 

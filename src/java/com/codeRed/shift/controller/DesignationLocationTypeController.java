@@ -7,7 +7,7 @@ package com.codeRed.shift.controller;
 
 import com.codeRed.dbCon.DBConnection;
 import com.codeRed.shift.model.DesignationLocationTypeModel;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;

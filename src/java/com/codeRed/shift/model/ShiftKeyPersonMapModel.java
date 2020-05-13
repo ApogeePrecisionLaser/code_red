@@ -3,8 +3,8 @@ ShiftWorkBench-2
  */
 package com.codeRed.shift.model;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import com.codeRed.general.model.GeneralModel;
 import com.codeRed.shift.tableClasses.ShiftKeyPersonMapBean;
 import com.codeRed.util.KrutiDevToUnicodeConverter;

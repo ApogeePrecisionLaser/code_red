@@ -8,8 +8,8 @@ package com.codeRed.organization.model;
 import com.codeRed.organization.tableClasses.RwaBeneficiaryBean;
 import com.codeRed.util.KrutiDevToUnicodeConverter;
 import com.codeRed.util.UnicodeToKrutiDevConverter;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -252,8 +252,8 @@ public static int getRwa_id(String rwa_name) {
         return connection;
     }
 
-    public static void setConnection(Connection connection) {
-        RwaBeneficiaryModel.connection = connection;
+    public void setConnection(Connection connection) {
+        this.connection = connection;
     }
 
     public String getMessage() {

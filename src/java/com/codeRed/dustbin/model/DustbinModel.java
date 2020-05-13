@@ -8,7 +8,7 @@ package com.codeRed.dustbin.model;
 import com.codeRed.dustbin.tableClasses.Dustbin;
 import com.codeRed.util.KrutiDevToUnicodeConverter;
 import com.codeRed.util.UnicodeToKrutiDevConverter;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;

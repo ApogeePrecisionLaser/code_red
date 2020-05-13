@@ -6,7 +6,7 @@
 package com.codeRed.shift.model;
 
 import com.codeRed.shift.tableClasses.DutyType;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;

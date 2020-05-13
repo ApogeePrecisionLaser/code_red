@@ -9,7 +9,7 @@ import com.codeRed.dbCon.DBConnection;
 import com.codeRed.organization.model.BeneficiaryModel;
 import com.codeRed.organization.tableClasses.Beneficiary;
 import com.codeRed.util.UniqueIDGenerator;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;

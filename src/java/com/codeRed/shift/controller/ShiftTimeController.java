@@ -3,7 +3,7 @@
  */
 package com.codeRed.shift.controller;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import com.codeRed.dbCon.DBConnection;
 import com.codeRed.shift.model.ShiftTimeModel;
 import com.codeRed.shift.tableClasses.ShiftTimeBean;

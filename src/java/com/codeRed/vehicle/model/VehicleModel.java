@@ -9,7 +9,7 @@ import com.codeRed.general.model.GeneralModel;
 import com.codeRed.util.KrutiDevToUnicodeConverter;
 import com.codeRed.util.UnicodeToKrutiDevConverter;
 import com.codeRed.vehicle.tableClasses.Vehicle;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.ResultSet;

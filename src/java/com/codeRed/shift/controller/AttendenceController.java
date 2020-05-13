@@ -9,7 +9,7 @@ import com.codeRed.dbCon.DBConnection;
 import com.codeRed.shift.model.AttendenceModel;
 import com.codeRed.shift.tableClasses.ShiftLoginBean;
 import com.codeRed.util.UniqueIDGenerator;
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;

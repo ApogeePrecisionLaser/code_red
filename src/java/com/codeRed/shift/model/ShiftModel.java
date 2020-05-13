@@ -4,8 +4,8 @@
 
 package com.codeRed.shift.model;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import com.codeRed.shift.tableClasses.ShiftBean;
 import com.codeRed.util.KrutiDevToUnicodeConverter;
 import com.codeRed.util.UnicodeToKrutiDevConverter;
