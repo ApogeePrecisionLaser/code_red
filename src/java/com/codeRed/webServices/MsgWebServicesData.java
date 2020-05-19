@@ -19,7 +19,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import net.sf.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
+//import net.sf.json.JSONObject;
 
 /**
  *
@@ -36,7 +38,7 @@ public class MsgWebServicesData {
     @Path("/GCMData")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public String GCMData(JSONObject json) {
+    public String GCMData(JSONObject json) throws JSONException {
         System.out.println("GCMData WebServices");
           UserAppWebServiceModel userAppWebServiceModel = new UserAppWebServiceModel();
         String key_person_id = json.get("key_person_id").toString();

@@ -11,9 +11,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+//import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 //import org.apache.commons.dbcp.BasicDataSource;
 
 /**

@@ -47,16 +47,20 @@
     </servlet-mapping>
     <!-- Start of WebServices -->
     <servlet>
-        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-name>Servlet dispatcher</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-        <!--<init-param>
-            <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>com.survey.dataEntry.controller</param-value>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.codeRed.webServices</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup>-->
-    </servlet>    
+        <init-param>
+		<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+		<param-value>true</param-value>
+	</init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-name>Servlet dispatcher</servlet-name>
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
     <!-- End of WebServices -->

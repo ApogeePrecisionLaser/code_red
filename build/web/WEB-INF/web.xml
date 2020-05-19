@@ -46,21 +46,6 @@
         <url-pattern>/complaint_report_status</url-pattern>
     </servlet-mapping>
     <!-- Start of WebServices -->
-<!--    <servlet>
-        <servlet-name>ServletAdaptor</servlet-name>
-        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>-->
-        <!--<init-param>
-            <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>com.survey.dataEntry.controller</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>-->
-<!--    </servlet>    
-    <servlet-mapping>
-        <servlet-name>ServletAdaptor</servlet-name>
-        <url-pattern>/api/*</url-pattern>
-    </servlet-mapping>-->
-    
-    
     <servlet>
         <servlet-name>Servlet dispatcher</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
@@ -78,8 +63,6 @@
         <servlet-name>Servlet dispatcher</servlet-name>
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
-    
-    
     <!-- End of WebServices -->
     <!-- Start of Organisation Controllers -->
     <servlet>

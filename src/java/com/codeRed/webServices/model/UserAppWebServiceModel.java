@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -84,7 +85,7 @@ public class UserAppWebServiceModel {
             if (rs.next()) {
                 rowAffected = -1;
             } else {
-                PreparedStatement pst = connection.prepareStatement(query);
+                PreparedStatement pst = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
                 pst.setString(1, json.get("name").toString());
                 pst.setString(2, json.get("mobile_no").toString());
                 pst.setString(3, json.get("email_id").toString());
@@ -232,7 +233,7 @@ public class UserAppWebServiceModel {
         String contactQuery = "SELECT user_id, name, mobile_no FROM user_emergency_contact WHERE active='Y' AND user_id=";
 
         try {
-            ResultSet rs = connection.prepareStatement(userQuery).executeQuery();
+            ResultSet rs = connection.prepareStatement(userQuery,Statement.RETURN_GENERATED_KEYS).executeQuery();
             String is_verified = "";
             String user_id = "";
             if (rs.next()) {
@@ -247,7 +248,7 @@ public class UserAppWebServiceModel {
                 json.put("result", "fail");
             }
             if (is_verified.equals("Y")) {
-                PreparedStatement pst = connection.prepareStatement(query);
+                PreparedStatement pst = connection.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
                 pst.setString(1, json.get("mobile_no").toString());
                 pst.setString(2, json.get("password").toString());
                 rowAffected = pst.executeUpdate();
@@ -1098,8 +1099,9 @@ public class UserAppWebServiceModel {
                 + " FROM user WHERE user_id=" + user_id;
 //        String insertQuery = "INSERT INTO online_complaint (user_id, datetime, latitude, longitude, complaint_status_id) "
 //                + " VALUES(?, concat(concat(current_date, ' '), current_time),?,?,1) ";
-        String insertComplainQuery = "INSERT INTO code_red.complain (victim_name, mobile_no, latitude, longitude, date_time, node_id, text, user_id, is_emergency,police_involve) "
-                + " VALUES(?,?,?,?, concat(concat(current_date, ' '), current_time),?,?,?,?,?) ";
+        String insertComplainQuery = "INSERT INTO code_red.complain (victim_name, mobile_no, latitude, longitude, date_time, "
+                + " node_id, text, user_id, is_emergency) "
+                + " VALUES(?,?,?,?, concat(concat(current_date, ' '), current_time),?,?,?,?) ";
 
 
         try {
@@ -1152,7 +1154,7 @@ public class UserAppWebServiceModel {
 
 
                 if (code_red.equals("Y")) {
-                    PreparedStatement pst = connection.prepareStatement(insertComplainQuery);
+                    PreparedStatement pst = connection.prepareStatement(insertComplainQuery,Statement.RETURN_GENERATED_KEYS);
                     pst.setString(1, user_name);
                     pst.setString(2, mobile_no.trim());
                     pst.setDouble(3, latitude1);
@@ -1175,7 +1177,7 @@ public class UserAppWebServiceModel {
                     pst.setString(7, user_id);
                     pst.setString(8, emergency);//is emergency Y/N
                     String data=json.get("msgSendtoPolice")==null?"0":json.get("msgSendtoPolice").toString();
-                    pst.setString(9, data);
+                    //pst.setString(9, data);
                     rowAffacted = pst.executeUpdate();
                     int complaint_id = 0;
                     ResultSet rset = pst.getGeneratedKeys();
