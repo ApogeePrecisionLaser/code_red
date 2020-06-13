@@ -22,29 +22,30 @@
             var map;
             var start;
             var end;
-            var length=0;
+            var length = 0;
 
             //            var directionsService = new google.maps.DirectionsService();
             function bool()
             {
                 var mapOptions = {
                     zoom: 12,
-                    center: new google.maps.LatLng(23.15,79.90),
+                    // 29.940822 78.1281141
+                    center: new google.maps.LatLng(29.91, 78.1),
                     travelMode: google.maps.TravelMode.DRIVING
                 };
 
                 map = new google.maps.Map(document.getElementById('googleMap'),
-                mapOptions);
+                        mapOptions);
                 initialize();
             }
 
 //            var ini=0;
-            var coordinateCount=0;
+            var coordinateCount = 0;
 
             function initialize()
             {
 //                alert(++ini);
-                var bool=remove();
+                var bool = remove();
 //                alert(bool);
                 coordinateCount;
                 //                var array = new Array();
@@ -78,9 +79,9 @@
                     dataType: 'json',
                     contentType: 'application/json',
                     context: document.body,
-                    success: function(response_data)
+                    success: function (response_data)
                     {
-                        var data=response_data.data;
+                        var data = response_data.data;
 //                        alert("data: "+data);
 //                        if(data.length==0)
 //                        {
@@ -88,36 +89,44 @@
 //                                window.location.reload(1);
 //                            }, 15000);
 //                        }
-                        for(var i=0;i<data.length;i++)
-                        {
+                        var mark;
+                        mark = "img/marker.png";
+                        //alert("mmm -"+mark);
+                        for (var i = 0; i < data.length; i++)
+                        {//alert("lat -"+data[i].latitude);
+                            //alert("long -"+data[i].longitude);
+                            //alert("mark -"+mark);
                             markers[i] = new google.maps.Marker({
-                                position: new google.maps.LatLng(data[i].latitude,data[i].longitude),
+                                position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
                                 map: map,
-                                url: 'http://www.google.com/',
-                                title: data[i].key_person_name+": - "+data[i].mobile_no
+                                icon: mark
+                                        //url: 'http://www.google.com/',
+                                        //title: data[i].key_person_name + ": - " + data[i].mobile_no
                             });
-                            google.maps.event.addListener(markers[i], 'click', function() {
+                            //alert("marker -"+markers[i]);
+                            google.maps.event.addListener(markers[i], 'click', function () {
                                 window.open(this.url);  //changed from markers[i] to this
                             });
 //                            $("#lati"+(i+1)).val(data[i].latitude);
 //                            $("#longi"+(i+1)).val(data[i].longitude);
                         }
-                        coordinateCount=data.length;
+                        coordinateCount = data.length;
 //                        alert("recursion");
-                        setTimeout(initialize,1000);
+                        setTimeout(initialize, 1000);
                     }
                 });
             }
-            
-            function remove(){
-                if(markers!=null)
+
+            function remove() {
+                if (markers != null)
                 {
-                    for(var ii=0;ii<coordinateCount;ii++)
+                    for (var ii = 0; ii < coordinateCount; ii++)
                     {
                         markers[ii].setMap(null);
                     }
                     return true;
-                }}
+                }
+            }
             google.maps.event.addDomListener(window, 'load', bool);
         </script>
     </head>

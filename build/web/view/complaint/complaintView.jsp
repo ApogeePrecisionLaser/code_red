@@ -31,7 +31,7 @@
 
             function worker()
             {
-                // alert("1");
+                //alert("1");debugger;
                 $.ajax({url: "complaintCont.do",
                     data: "action1=checkTotalRows&total_rows="+total_rows,
                     success: function(response_data)
@@ -43,6 +43,7 @@
                             // play();
                             playSound();
                         } else{
+                            //playSound();
                             setTimeout(worker, 5000);
                         }
                     }
@@ -52,8 +53,8 @@
 
             var bool=true;
 
-            function playSound(){
-                var audio = doc.getElementById("audio");
+            function playSound(){debugger;
+                var audio = document.getElementById("audio1");
                 // audio.addEventListener("ended", function () {
                 //    doc.getElementById("audio").src ="http://122.176.75.92:8080/CodeRed/audios/audio.mp3";
                 audio.play();
@@ -454,8 +455,8 @@
                                                     <input class="button" type="submit" name="task" id="showAllRecords" value="Show All Records">
                                                     <!--                                                    <input type="button" style="" class="pdf_button" id="viewPdf" name="viewPdf" value="" onclick="displayMapList()">-->
                                                 </td>
-                                            <audio id="audio" controls="controls" >
-                                                <source src="http://122.176.75.92:8080/CodeRed/audios/audio.mp3" type="audio/mp3">
+                                            <audio id="audio1" controls="controls" >
+                                                <source src="http://120.138.10.146:8080/CodeRed/audios/complainAlert.wav" type="audio/mp3">
                                                     Your browser does not support the audio element.
                                             </audio>
                                             </tr>
